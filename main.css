@@ -1,0 +1,44 @@
+.btnspinner{
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.spinner_area input{
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    width: auto;
+    vertical-align: middle;
+    /* デフォルトのスピナーを消す */
+    -webkit-appearance: none;
+    -moz-appearance:textfield;
+}
+
+.spinner_area input[type="button"]{
+    cursor: pointer;
+}
+
+.infurnal-title{
+    color:blueviolet;
+    text-shadow: 1px 1px 0px #E055F8;   
+}
+
+.infurnal-text{
+    color:#FEC0FF;
+}
+
+thead th{
+    color:#D3D3D3;
+}
+
+tbody th{
+    color:#D3D3D3;
+}
+
+tbody td{
+    color:white;
+}
