@@ -79,13 +79,14 @@ $(function(){
         
         for(let i=0;i < 6;i++){
             let number = document.getElementById("number"+(i+4)).value;
+            number = Math.trunc(number);
             cal += ary[i] * number;
             total += number;
             numberAry.push(number);
         }
         // 計算結果表示
         var doc0 = document.getElementById("result");
-        doc0.innerHTML=cal+"M（"+Math.trunc(total) +"体）";
+        doc0.innerHTML=cal+"M（"+total +"体）";
 
         // 履歴表示
         console.log(aryCount);
