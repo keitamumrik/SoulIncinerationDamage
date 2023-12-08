@@ -10,6 +10,10 @@ $(function(){
     var cal1 =0;
     var cal2 =0;
 
+    var total0 =0;
+    var total1 =0;
+    var total2 =0;    
+
     var history0 = document.getElementById("history0");
     var history1 = document.getElementById("history1");
     var history2 = document.getElementById("history2");
@@ -92,30 +96,36 @@ $(function(){
         console.log(aryCount);
         if(aryCount==0){
             cal0=cal;
+            total0=total;
             history0Array = numberAry.concat();
             // history0.innerHTML=history0Array;
-            outputhistory(history0Array,1,cal0);
+            outputhistory(history0Array,1,cal0,total0);
         }else if(aryCount==1){
             cal1=cal;
+            total1=total;
             history1Array = numberAry.concat();
             // history1.innerHTML=history1Array;
-            outputhistory(history1Array,2,cal1);
+            outputhistory(history1Array,2,cal1,total1);
         }else if(aryCount==2){
             cal2=cal;
+            total2=total;
             history2Array = numberAry.concat();
             // history2.innerHTML=history2Array;
-            outputhistory(history2Array,3,cal2);
+            outputhistory(history2Array,3,cal2,total2);
         }else if(aryCount > 2){
             cal0=cal1;
             cal1=cal2;
             cal2=cal;
+            total0=total1;
+            total1=total2;
+            total2=total;
             history0Array=history1Array.concat();
             history1Array=history2Array.concat();
             history2Array=numberAry.concat();
 
-            outputhistory(history0Array,1,cal0);
-            outputhistory(history1Array,2,cal1);
-            outputhistory(history2Array,3,cal2);
+            outputhistory(history0Array,1,cal0,total0);
+            outputhistory(history1Array,2,cal1,total1);
+            outputhistory(history2Array,3,cal2,total2);
 
             // history0.innerHTML=history0Array;
             // history1.innerHTML=history1Array;
@@ -124,7 +134,7 @@ $(function(){
         aryCount =aryCount+1;
 
     });
-    function outputhistory(history,number,historyCal){
+    function outputhistory(history,number,historyCal,historyTotal){
         
         for(i=0;i<6;i++){
             var idString="history"+(i+4)+"-"+number;
@@ -133,6 +143,6 @@ $(function(){
         }
         var calIdString = "cal"+number;
         var calId = document.getElementById(String(calIdString));
-        calId.innerHTML=historyCal+"%";
+        calId.innerHTML=historyCal+"M（"+historyTotal+"体）";
     }
 });
