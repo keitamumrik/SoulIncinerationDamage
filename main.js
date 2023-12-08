@@ -74,6 +74,7 @@ $(function(){
     $('.calculate').on('click', function(e){
         
         var cal=0;
+        var total =0;
         var numberAry =[];
         
         for(let i=0;i < 6;i++){
