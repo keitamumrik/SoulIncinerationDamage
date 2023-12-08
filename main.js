@@ -63,15 +63,12 @@ $(function(){
     }
 
     const ary = [
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38,
-        40,
+        6.5,
+        7.5,
+        8,
+        9,
+        10,
+        11.5,
     ];
 
     $('.calculate').on('click', function(e){
@@ -79,7 +76,7 @@ $(function(){
         var cal=0;
         var numberAry =[];
         
-        for(let i=0;i < 9;i++){
+        for(let i=3;i < 9;i++){
             let number = document.getElementById("number"+(i+1)).value;
             cal += ary[i] * number;
             numberAry.push(number);
@@ -126,7 +123,7 @@ $(function(){
     });
     function outputhistory(history,number,historyCal){
         
-        for(i=0;i<9;i++){
+        for(i=3;i<9;i++){
             var idString="history"+(i+1)+"-"+number;
             var historyId = document.getElementById(String(idString));
             historyId.innerHTML=history[i];
