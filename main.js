@@ -76,8 +76,8 @@ $(function(){
         var cal=0;
         var numberAry =[];
         
-        for(let i=3;i < 9;i++){
-            let number = document.getElementById("number"+(i+1)).value;
+        for(let i=0;i < 6;i++){
+            let number = document.getElementById("number"+(i+4)).value;
             cal += ary[i] * number;
             numberAry.push(number);
         }
@@ -123,8 +123,8 @@ $(function(){
     });
     function outputhistory(history,number,historyCal){
         
-        for(i=3;i<9;i++){
-            var idString="history"+(i+1)+"-"+number;
+        for(i=0;i<6;i++){
+            var idString="history"+(i+4)+"-"+number;
             var historyId = document.getElementById(String(idString));
             historyId.innerHTML=history[i];
         }
