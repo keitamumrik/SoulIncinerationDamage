@@ -143,6 +143,6 @@ $(function(){
         }
         var calIdString = "cal"+number;
         var calId = document.getElementById(String(calIdString));
-        calId.innerHTML=historyCal+"M\n（"+historyTotal+"体）";
+        calId.innerHTML=historyCal+'M\n（'+historyTotal+'体）';
     }
 });
